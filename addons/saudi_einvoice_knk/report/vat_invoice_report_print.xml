@@ -88,7 +88,8 @@
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">
                         Bank‬‬: </span></td>
-                    <td width="16%"><span class="hide_border text-center arabic" t-field="company.bank"/> ‫‪</td>
+                    <td width="16%"><span class="hide_border text-center arabic" t-field="o.partner_bank_id"/>
+                        ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">البنك</span>
                         ‬</td>
                 </tr>
@@ -96,74 +97,6 @@
         </div>
 
 
-        <!--        <div class="header">-->
-        <!--            <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/style.css"/>-->
-        <!--            <div t-att-class="container">-->
-        <!--                <div class="row">-->
-        <!--                    <div class="col-8">-->
-        <!--                        <img t-if="company.logo"-->
-        <!--                             t-att-src="image_data_uri(company.logo)"-->
-        <!--                             style="height: 100px;width: 100px; "-->
-        <!--                             alt="Logo"/>-->
-        <!--                    </div>-->
-        <!--                    <div class="col-4">-->
-        <!--                        parcode-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="row">-->
-        <!--                    <div class="col-6">-->
-        <!--                        <strong>-->
-        <!--                            <span class="text-right arabic" style="padding-right:5px;"-->
-        <!--                                  t-field="company.arabic_name"/></strong>-->
-        <!--                        <br/>-->
-        <!--                        <t t-if="company.street">-->
-        <!--                            <span class="text-right arabic" style="padding-right:5px;"-->
-        <!--                                  t-field="company.arabic_street"/><br/>-->
-        <!--                        </t>-->
-        <!--                        <t t-if="company.street2">-->
-        <!--                            <span class="text-right arabic" style="padding-right:5px;"-->
-        <!--                                  t-field="company.arabic_street2"/><br/>-->
-        <!--                        </t>-->
-        <!--                        <t t-if="company.city">-->
-        <!--                            <span class="text-right arabic" style="padding-right:5px;"-->
-        <!--                                  t-field="company.arabic_city"/><br/>-->
-        <!--                        </t>-->
-        <!--                        <t t-if="company.arabic_country">-->
-        <!--                            <span class="text-right arabic" style="padding-right:5px;"-->
-        <!--                                  t-field="company.arabic_country"/><br/>-->
-        <!--                        </t>-->
-
-        <!--                        <p width="100%">‫‪ <span class="text-right"-->
-        <!--                                                 style="padding-left:5px;"/>CR-->
-        <!--                            No. : </p>-->
-        <!--                        <p width="16%"><span class="text-center arabic" t-field="company.company_registry"/>-->
-        <!--                            ‫‪</p>-->
-        <!--                        <p width="17%"><span class="text-right arabic" style="padding-right:-6px;">رقم السجل-->
-        <!--                            التجاري</span>-->
-        <!--                            ‬</p>-->
-
-        <!--                        <p width="2%" style="border-left:1pt solid black;"></p>-->
-
-        <!--                        <p width="16%">‫‪ <span class="text-right" style="padding-left:5px;">VAT‬‬-->
-        <!--                            No.: </span></p>-->
-        <!--                        <p width="16%"><span class="text-center arabic" t-field="company.vat"/> ‫‪</p>-->
-        <!--                        <p width="17%"><span class="text-right arabic" style="padding-right:-6px;">ضريبة القيمة-->
-        <!--                            المضافة</span>‬</p>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="row">-->
-        <!--                    <div class="col-8">-->
-        <!--                        ff-->
-        <!--                        ew-->
-        <!--                    </div>-->
-        <!--                    <div class="col-4">-->
-        <!--                        client-->
-        <!--                    </div>-->
-        <!--                </div>-->
-
-        <!--            </div>-->
-
-        <!--        </div>-->
         <div class="article o_report_layout_standard">
             <t t-raw="0"/>
         </div>
