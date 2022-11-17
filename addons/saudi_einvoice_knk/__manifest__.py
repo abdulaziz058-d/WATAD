@@ -31,6 +31,8 @@
     'data': [
         'report/vat_invoice_report_print.xml',
         'report/vat_report_action_call.xml',
+        'report/t.xml',
+
         'report/invoice_default_attach.xml',
         'report/simpli_vat_invoice_report.xml',
         'views/account_move_report_action.xml',

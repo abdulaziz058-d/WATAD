@@ -54,5 +54,7 @@
             <field name="dpi">90</field>
             <field name="report_ids" eval="[(6,0,[ref('saudi_einvoice_knk.action_report_simplified_tax_invoice')])]"/>
         </record>
+
+
     </data>
 </odoo>
