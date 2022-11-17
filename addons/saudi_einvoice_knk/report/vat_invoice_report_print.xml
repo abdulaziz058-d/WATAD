@@ -105,13 +105,12 @@
     <template id="report_tax_invoice_document">
         <t t-call="saudi_einvoice_knk.external_layout_seti">
             <t t-foreach="doc" t-as="o">
-                <div class="page" style="">
+                <div class="page">
                     <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/style.css"/>
                     <t t-set="company" t-value="res_company"/>
                     <div class="font">
-
-                        <table style="border:1pt solid grey;width:100%;
-    height: 23px;color:black; margin-top:10pt;" class="table-condensed table-sm">
+                        <table style="margin-top:100px;border:1pt solid grey;width:100%;height: 24px;color:black;"
+                               class="table-condensed table-sm">
                             <tr>
                                 <td style="padding:1pt;margin:0pt;font-weight: bold;text-align:center;background-color:#DCDCDC;"><span
                                         class="text-right arabic">Tax Invoice / فاتورة ضريبية </span></td>

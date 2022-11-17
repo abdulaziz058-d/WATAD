@@ -42,6 +42,13 @@
                                         </td>
                                         <td class="arabic" style="width:25%; text-align:right;">فترة الخدمة</td>
                                     </tr>
+                                    <tr>
+                                        <td style="font-weight:bold; width:25%;">‫‪Client‬</td>
+                                        <td style="width:50%; text-align:center;">
+                                            <span t-field="o.partner_id.name"/>
+                                        </td>
+                                        <td class="arabic" style="width:25%; text-align:right;">العميل</td>
+                                    </tr>
                                 </table>
                                 <br/>
                             </div>
