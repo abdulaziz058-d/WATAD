@@ -67,6 +67,16 @@
                     <td width="17%"><span class="text-right arabic" style="padding-right:-6px;">ضريبة القيمة
                         المضافة</span>‬</td>
                 </tr>
+                <tr>
+                    <td width="16%">‫‪ <span class="text-right" style="padding-left:5px;">Contact‬‬ No.: </span></td>
+                    <td width="16%"><span class="text-center arabic" t-field="company.phone"/> ‫‪</td>
+                    <td width="17%"><span class="text-right arabic" style="padding-right:-6px;">رقم التواصل</span>‬</td>
+                </tr>
+                <tr>
+                    <td width="16%">‫‪ <span class="text-right" style="padding-left:5px;">Website‬‬: </span></td>
+                    <td width="16%"><span class="text-center arabic" t-field="company.website"/> ‫‪</td>
+                    <td width="17%"><span class="text-right arabic" style="padding-right:-6px;">الموقع</span>‬</td>
+                </tr>
             </table>
         </div>
 

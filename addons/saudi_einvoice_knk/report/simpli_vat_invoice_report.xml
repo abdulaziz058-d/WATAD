@@ -7,7 +7,7 @@
                     <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/style.css"/>
                     <t t-set="company" t-value="res_company"/>
                     <div class="font">
-                        <table style="border:1pt solid grey;width:100%;font-size:12px;margin-bottom: 20px;margin-top:50px"
+                        <table style="border:1pt solid grey;width:100%;font-size:12px;margin-bottom: 20px;margin-top:100px"
                                width="100%">
                             <tr>
                                 <td style="padding:4pt;font-weight: bold;text-align:center;background-color:#DCDCDC;"><span
