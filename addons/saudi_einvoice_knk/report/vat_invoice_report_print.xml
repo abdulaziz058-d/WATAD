@@ -10,16 +10,8 @@
         <div class="header">
             <table style="border:none;width:100%;font-size:12px;" width="100%">
                 <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/css.css"/>
-                <!--                <tr>-->
-                <!--                    <td style="border:none" colspan="3" width="30%"-->
-                <!--                        class="hide_border text-center"><img-->
-                <!--                            t-if="company.logo"-->
-                <!--                            t-att-src="image_data_uri(company.logo)"-->
-                <!--                            style="height: 100px;width: 100px;"-->
-                <!--                            alt="Logo"/></td>-->
-                <!--                </tr>-->
                 <tr>
-                    <td style="border:none">
+                    <td style="border:none;">
                         <strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
                         <t t-if="company.street">
                             <span style="padding-left:5px;" t-field="company.street"/><br/>
@@ -38,7 +30,7 @@
                         class="text-center"><img
                             t-if="company.logo"
                             t-att-src="image_data_uri(company.logo)"
-                            style="height: 150px;width: 150px"
+                            style="height: 100px;width: 100px"
                             alt="Logo"/></td>
                     <td class="text-right">
                         <strong>
@@ -64,46 +56,48 @@
                 </tr>
                 <tr></tr>
                 <tr>
-                    <td width="15%">‫‪ <span class="hide_border text-right" style="padding-left:5px;"/>CR No. : </td>
-                    <td width="70%"><span class="hide_border text-center arabic" t-field="company.company_registry"/>
+                    <td width="15%">‫‪ <span class="hide_border text-right" style="padding-left:5px;"/>CR No: </td>
+                    <td width="70%"><span class="text-center arabic" style="margin-left:-60px"
+                                          t-field="company.company_registry"/>
                         ‫‪</td>
-                    <td width="15%"><span class="hide_border text-right arabic" style="padding-right:-6px;">رقم السجل
-                        التجاري</span>
+                    <td width="15%"><span class="text-right arabic">رقم السجل التجاري</span>
                         ‬</td>
                 </tr>
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">VAT‬‬
                         No.: </span></td>
-                    <td width="16%"><span class="hide_border text-center arabic" t-field="company.vat"/> ‫‪</td>
+                    <td width="16%"><span style="margin-left:-60px" class="hide_border text-center arabic"
+                                          t-field="company.vat"/> ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">ضريبة القيمة
                         المضافة</span>‬</td>
                 </tr>
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">Contact‬‬
                         No.: </span></td>
-                    <td width="16%"><span class="hide_border text-center arabic" t-field="company.phone"/> ‫‪</td>
+                    <td width="16%"><span style="margin-left:-50px" class="hide_border text-center arabic"
+                                          t-field="company.phone"/> ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">رقم
                         التواصل</span>‬</td>
                 </tr>
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">
                         Website‬‬: </span></td>
-                    <td width="16%"><span class="hide_border text-center arabic" t-field="company.website"/> ‫‪</td>
+                    <td width="16%"><span style="margin-left:-60px" class="hide_border text-center arabic"
+                                          t-field="company.website"/> ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">
                         الموقع</span>‬</td>
                 </tr>
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">
                         Bank‬‬: </span></td>
-                    <td width="16%"><span class="hide_border text-center arabic" t-field="o.partner_bank_id"/>
+                    <td width="16%"><span style="margin-left:-60px" class="hide_border text-center arabic"
+                                          t-field="o.partner_bank_id"/>
                         ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">البنك</span>
                         ‬</td>
                 </tr>
             </table>
         </div>
-
-
         <div class="article o_report_layout_standard">
             <t t-raw="0"/>
         </div>
