@@ -7,11 +7,11 @@
         <t t-if="not o or not 'company_id' in o">
             <t t-set="company" t-value="res_company"/>
         </t>
-        <div class="header">
+        <div class="header" style="margin:20px">
             <table style="border:none;width:100%;font-size:12px;" width="100%">
                 <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/css.css"/>
                 <tr>
-                    <td style="border:none;">
+                    <td style="border:none;white-space: nowrap;">
                         <strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
                         <t t-if="company.street">
                             <span style="padding-left:5px;" t-field="company.street"/><br/>
@@ -57,7 +57,7 @@
                 <tr></tr>
                 <tr>
                     <td width="15%">‫‪ <span class="hide_border text-right" style="padding-left:5px;"/>CR No: </td>
-                    <td width="70%"><span class="text-center arabic" style="margin-left:-60px"
+                    <td width="70%"><span class="text-center arabic" style="margin-left:-120px"
                                           t-field="company.company_registry"/>
                         ‫‪</td>
                     <td width="15%"><span class="text-right arabic">رقم السجل التجاري</span>
@@ -66,7 +66,7 @@
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">VAT‬‬
                         No.: </span></td>
-                    <td width="16%"><span style="margin-left:-60px" class="hide_border text-center arabic"
+                    <td width="16%"><span style="margin-left:-120px" class="hide_border text-center arabic"
                                           t-field="company.vat"/> ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">ضريبة القيمة
                         المضافة</span>‬</td>
@@ -74,7 +74,7 @@
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">Contact‬‬
                         No.: </span></td>
-                    <td width="16%"><span style="margin-left:-50px" class="hide_border text-center arabic"
+                    <td width="16%"><span style="margin-left:-110px" class="hide_border text-center arabic"
                                           t-field="company.phone"/> ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">رقم
                         التواصل</span>‬</td>
@@ -82,7 +82,7 @@
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">
                         Website‬‬: </span></td>
-                    <td width="16%"><span style="margin-left:-60px" class="hide_border text-center arabic"
+                    <td width="16%"><span style="margin-left:-120px" class="hide_border text-center arabic"
                                           t-field="company.website"/> ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">
                         الموقع</span>‬</td>
@@ -90,7 +90,7 @@
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">
                         Bank‬‬: </span></td>
-                    <td width="16%"><span style="margin-left:-60px" class="hide_border text-center arabic"
+                    <td width="16%"><span style="margin-left:-120px" class="hide_border text-center arabic"
                                           t-field="o.partner_bank_id"/>
                         ‫‪</td>
                     <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">البنك</span>
@@ -98,7 +98,7 @@
                 </tr>
             </table>
         </div>
-        <div class="article o_report_layout_standard">
+        <div style="margin:20px" class="article o_report_layout_standard">
             <t t-raw="0"/>
         </div>
     </template>
