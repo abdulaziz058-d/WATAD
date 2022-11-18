@@ -53,7 +53,7 @@ class AccountMove(models.Model):
         IrTranslation = self.env['ir.translation']
         domain = [
             ('name', '=', 'product.product,name'), ('state', '=', 'translated')]
-        translation = IrTranslation.search(domain + [('res_id', '=', pid)])
+        translation = IrTranslation.search(domain+[('res_id', '=', pid)])
         if translation:
             return translation.value
         else:
@@ -88,21 +88,18 @@ class AccountMove(models.Model):
             company_name_tag_encoding = tag.to_bytes(length=1, byteorder='big')
             company_name_length_encoding = len(company_name_byte_array).to_bytes(length=1, byteorder='big')
             return company_name_tag_encoding + company_name_length_encoding + company_name_byte_array
-
         for record in self:
             qr_code_str = ''
             seller_name_enc = get_qr_encoding(1, record.company_id.display_name)
             company_vat_enc = get_qr_encoding(2, record.company_id.vat or '')
             # date_order = fields.Datetime.from_string(record.create_date)
             if record.invoice_date_supply:
-                time_sa = fields.Datetime.context_timestamp(self.with_context(tz='Asia/Riyadh'),
-                                                            record.invoice_date_supply)
+                time_sa = fields.Datetime.context_timestamp(self.with_context(tz='Asia/Riyadh'), record.invoice_date_supply)
             else:
                 time_sa = fields.Datetime.context_timestamp(self.with_context(tz='Asia/Riyadh'), record.create_date)
             timestamp_enc = get_qr_encoding(3, time_sa.isoformat())
             invoice_total_enc = get_qr_encoding(4, str(record.amount_total))
-            total_vat_enc = get_qr_encoding(5,
-                                            str(record.currency_id.round(record.amount_total - record.amount_untaxed)))
+            total_vat_enc = get_qr_encoding(5, str(record.currency_id.round(record.amount_total - record.amount_untaxed)))
 
             str_to_encode = seller_name_enc + company_vat_enc + timestamp_enc + invoice_total_enc + total_vat_enc
             qr_code_str = base64.b64encode(str_to_encode).decode('UTF-8')
@@ -119,5 +116,3 @@ class ResCompany(models.Model):
     arabic_state = fields.Char('Arabic State')
     arabic_country = fields.Char('Arabic Country')
     arabic_zip = fields.Char('Arabic Zip')
-
-    bank = fields.Char('Bank')
