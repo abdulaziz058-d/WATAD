@@ -10,15 +10,16 @@
         <div class="header">
             <table style="border:none;width:100%;font-size:12px;" width="100%">
                 <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/css.css"/>
+                <!--                <tr>-->
+                <!--                    <td style="border:none" colspan="3" width="30%"-->
+                <!--                        class="hide_border text-center"><img-->
+                <!--                            t-if="company.logo"-->
+                <!--                            t-att-src="image_data_uri(company.logo)"-->
+                <!--                            style="height: 100px;width: 100px;"-->
+                <!--                            alt="Logo"/></td>-->
+                <!--                </tr>-->
                 <tr>
-                    <td style="border:none" colspan="3" width="30%" class="hide_border text-center"><img
-                            t-if="company.logo"
-                            t-att-src="image_data_uri(company.logo)"
-                            style="height: 100px;width: 100px; "
-                            alt="Logo"/></td>
-                </tr>
-                <tr>
-                    <td style="border:none" colspan="2" width="35%" class="hide_border">
+                    <td style="border:none">
                         <strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
                         <t t-if="company.street">
                             <span style="padding-left:5px;" t-field="company.street"/><br/>
@@ -33,7 +34,13 @@
                             <span style="padding-left:5px;" t-field="company.country_id.name"/><br/>
                         </t>
                     </td>
-                    <td colspan="2" width="35%" class="hide_border text-right">
+                    <td rowspan="2" style="border:none"
+                        class="text-center"><img
+                            t-if="company.logo"
+                            t-att-src="image_data_uri(company.logo)"
+                            style="height: 150px;width: 150px"
+                            alt="Logo"/></td>
+                    <td class="text-right">
                         <strong>
                             <span class="text-right arabic" style="padding-right:5px;"
                                   t-field="company.arabic_name"/></strong><br/>
@@ -55,14 +62,14 @@
                         </t>
                     </td>
                 </tr>
+                <tr></tr>
                 <tr>
-                    <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;"/>CR No. : </td>
-                    <td width="16%"><span class="hide_border text-center arabic" t-field="company.company_registry"/>
+                    <td width="15%">‫‪ <span class="hide_border text-right" style="padding-left:5px;"/>CR No. : </td>
+                    <td width="70%"><span class="hide_border text-center arabic" t-field="company.company_registry"/>
                         ‫‪</td>
-                    <td width="17%"><span class="hide_border text-right arabic" style="padding-right:-6px;">رقم السجل
+                    <td width="15%"><span class="hide_border text-right arabic" style="padding-right:-6px;">رقم السجل
                         التجاري</span>
                         ‬</td>
-                    <!--                    <td width="2%" style="border-left:1pt solid black;"></td>-->
                 </tr>
                 <tr>
                     <td width="16%">‫‪ <span class="hide_border text-right" style="padding-left:5px;">VAT‬‬
@@ -109,10 +116,10 @@
                     <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/style.css"/>
                     <t t-set="company" t-value="res_company"/>
                     <div class="font">
-                        <table style="margin-top:100px;border:1pt solid grey;width:100%;height: 24px;color:black;"
+                        <table style="border:1pt solid grey;width:100%;height: 24px;color:black;"
                                class="table-condensed table-sm">
                             <tr>
-                                <td style="padding:1pt;margin:0pt;font-weight: bold;text-align:center;background-color:#DCDCDC;"><span
+                                <td style="padding:1pt;font-weight: bold;text-align:center;background-color:#DCDCDC;"><span
                                         class="text-right arabic">Tax Invoice / فاتورة ضريبية </span></td>
                             </tr>
                         </table>
@@ -139,7 +146,7 @@
                                      t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', doc.get_qr_code(), 110, 110)"/>
                             </div>
                         </div>
-                        <table style="border:1pt solid grey;width:100%;color:black; margin-top:0pt; color:black;"
+                        <table style="border:1pt solid grey;width:100%;color:black; margin-top:5pt; color:black;"
                                class="table-condensed">
                             <thead>
                                 <tr style="background-color:#DCDCDC">
@@ -272,7 +279,7 @@
                                 </tr>
                             </thead>
                         </table>
-                        <table style="border:1pt solid grey;width:100%;color:black;margin-top:0px; color:black;"
+                        <table style="border:1pt solid grey;width:100%;color:black;margin-top:5px; color:black;"
                                class="table table-bordered table-sm">
                             <thead>
                                 <tr>
